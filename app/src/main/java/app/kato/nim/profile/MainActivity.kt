@@ -10,14 +10,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        profileImage.isVisible = false
-        profileCommentText.isVisible = false
 
-        button.setOnClickListener {
+        button1.setOnClickListener {
 
-            profileImage.isVisible = true
-            profileCommentText.isVisible = true
+            profileImage.setImageResource(R.drawable.randy_image)
+            profileLabelText.text = "名前"
+            profileCommentText.text = "Androidメンターのランディだよ"
+        }
 
+        button2.setOnClickListener {
+
+            profileImage.setImageResource(R.drawable.baseball_image)
+            profileLabelText.text = "スポーツ"
+            profileCommentText.text = "野球観戦が好きで、スタジアムに通っている"
+        }
+
+        button3.setOnClickListener {
+
+            profileImage.setImageResource(R.drawable.donut_image)
+            profileLabelText.text = "好きな食べ物"
+            profileCommentText.text = "キャンディやドーナツが大好き"
+        }
+
+        button4.setOnClickListener {
+
+            profileImage.setImageResource(R.drawable.gadget_image)
+            profileLabelText.text = "趣味"
+            profileCommentText.text = "ガジェットを集めて動かすこと"
         }
     }
 }
